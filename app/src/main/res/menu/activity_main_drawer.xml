@@ -10,9 +10,9 @@
             android:title="@string/menu_principal" />
 
         <item
-            android:id="@+id/nav_servico"
-            android:icon="@drawable/ic_menu_servicos"
-            android:title="@string/menu_servicos" />
+            android:id="@+id/nav_cursos"
+            android:icon="@drawable/ic_menu_cursos"
+            android:title="@string/menu_cursos" />
 
         <item
             android:id="@+id/nav_clientes"
@@ -21,12 +21,12 @@
 
     </group>
 
-    <item android:title="Entre em contato">
+    <item android:title="@string/entre_em_contato">
         <menu>
             <item
                 android:id="@+id/nav_site"
-                android:icon="@drawable/ic_menu_site"
-                android:title="@string/menu_site" />
+                android:icon="@drawable/ic_menu_empresas"
+                android:title="@string/menu_empresas" />
 
             <item
                 android:id="@+id/nav_sobre"

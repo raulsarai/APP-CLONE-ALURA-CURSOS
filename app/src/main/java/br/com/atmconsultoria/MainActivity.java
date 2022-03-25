@@ -28,12 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                sendMail();
-            }
-        });
+        binding.appBarMain.fab.setOnClickListener(view -> sendMail());
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -41,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_principal,
                 R.id.nav_clientes,
-                R.id.nav_servico,
+                R.id.nav_cursos,
                 R.id.nav_site,
                 R.id.nav_sobre)
                 .setOpenableLayout(drawer)
@@ -54,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
     public void sendMail(){
         Intent intent = new Intent( Intent.ACTION_SEND);
 
-        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"contato@atm.com"} );
-        intent.putExtra( Intent.EXTRA_SUBJECT, "Orçamento para consultoria personalizada" );
-        intent.putExtra( Intent.EXTRA_TEXT, "Olá, gostaria de um orçamento para minha empresa" );
+        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"contato@alura.com.br"} );
+        intent.putExtra( Intent.EXTRA_SUBJECT, "Gostaria de contrar um curso de DESENVOLVIMENTO ANDROID." );
+        intent.putExtra( Intent.EXTRA_TEXT, "Olá, gostaria de fazer curso  de DESENVOLVIMENTO ANDROID para subir de cargo na minha empresa!" );
 
         intent.setType("message/rfc822");
 

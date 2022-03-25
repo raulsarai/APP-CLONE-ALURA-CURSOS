@@ -2,6 +2,7 @@ package br.com.atmconsultoria.ui.sobre;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -60,7 +61,7 @@ public class SobreFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_sobre, container, false);
@@ -74,10 +75,13 @@ public class SobreFragment extends Fragment {
                 .setDescription(descricao)
 
                 //redes sociais
-                .addGroup("Siga ATM nas redes Sociais")
-                .addFacebook("the.raul.msarai", "Facebook")
-                .addInstagram("raul_msarai","Instagram")
-                .addGitHub("raulsarai","GitHub")
+                .addGroup("Siga a Alura nas redes Sociais")
+                .addYoutube("alura", "YouTube/alura")
+                .addFacebook("AluraCursosOnline", "@AluraCursosOnline")
+                .addTwitter("aluraonline", "@aluraonline")
+                .addInstagram("aluraonline","@aluraonline")
+                .addPlayStore("br.com.alura.mobi","Download App Alura Cursos")
+                .addGitHub("alura-cursos","@alura-cursos")
 
                 //versao do app
                 .addItem(versao)
