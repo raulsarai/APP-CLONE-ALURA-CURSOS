@@ -17,5 +17,27 @@
         selecionadas pelo Google For Startups a participar do programa Growth Academy em 2021.</string>
     <string name="nossa_missao">Nossa missão é fazer você alcançar o seu melhor</string>
     <string name="entre_em_contato">Entre em contato</string>
+    <string name="url_wppchat">https://wa.me/5511984510286?text=Ol%C3%A1+Alura%2C+gostaria+de+saber+mais+sobre+a+forma%C3%A7%C3%A3o+DESENVOLVEDOR+ANDROID%21</string>
+    <string name="url_youtube">https://www.youtube.com/alura</string>
+    <string name="title_youtube">Youtube/alura</string>
+    <string name="title_release">versão 1.0</string>
+    <string name="title_email">contato@alura.com.br</string>
+    <string name="put_email">contato@alura.com.br</string>
+    <string name="put_subject">Gostaria de contrar um curso de DESENVOLVIMENTO ANDROID.</string>
+    <string name="put_bodytext">Olá, gostaria de fazer curso  de DESENVOLVIMENTO ANDROID para subir de cargo na minha empresa!</string>
+    <string name="set_type">message/rfc822</string>
+    <string name="chooser_title">Escolha um app de E-mail</string>
+    <string name="group_description">Siga a Alura nas redes Sociais</string>
+    <string name="title_facebook">\@AluraCursosOnline</string>
+    <string name="title_twitter">\@aluraonline</string>
+    <string name="title_insta">\@aluraonline</string>
+    <string name="title_playstore">Download App Alura Cursos</string>
+    <string name="title_github">\@alura-cursos</string>
+    <string name="id_facebook">AluraCursosOnline</string>
+    <string name="id_twitter">aluraonline</string>
+    <string name="id_insta">aluraonline</string>
+    <string name="id_playstore">br.com.alura.mobi</string>
+    <string name="id_github">alura-cursos</string>
+    <string name="wpp_alura_suporte">11992391170</string>
 
 </resources>

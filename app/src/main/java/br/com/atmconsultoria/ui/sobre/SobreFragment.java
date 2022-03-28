@@ -1,5 +1,7 @@
 package br.com.atmconsultoria.ui.sobre;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -65,9 +67,39 @@ public class SobreFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_sobre, container, false);
-        String descricao= getString(R.string.texto_sobre);
+        String descricao = getString(R.string.texto_sobre);
+
+
         Element versao = new Element();
-        versao.setTitle("versão 1.0");
+        versao.setTitle(getString(R.string.title_release));
+
+        Element youtube = new Element();
+        youtube.setTitle(getString(R.string.title_youtube));
+        youtube.setIconDrawable(R.mipmap.ic_yt);
+        youtube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url  =getString(R.string.url_youtube);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
+        Element email = new Element();
+        email.setTitle(getString(R.string.title_email));
+        email.setIconDrawable(R.drawable.ic_email);
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.put_email)});
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.put_subject));
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.put_bodytext));
+                intent.setType(getString(R.string.set_type));
+                startActivity(Intent.createChooser(intent, getString(R.string.chooser_title)));
+            }
+        });
 
         return new AboutPage(getActivity())
                 //logo e descrição
@@ -75,16 +107,18 @@ public class SobreFragment extends Fragment {
                 .setDescription(descricao)
 
                 //redes sociais
-                .addGroup("Siga a Alura nas redes Sociais")
-                .addYoutube("alura", "YouTube/alura")
-                .addFacebook("AluraCursosOnline", "@AluraCursosOnline")
-                .addTwitter("aluraonline", "@aluraonline")
-                .addInstagram("aluraonline","@aluraonline")
-                .addPlayStore("br.com.alura.mobi","Download App Alura Cursos")
-                .addGitHub("alura-cursos","@alura-cursos")
+                .addGroup(getString(R.string.group_description))
+                .addItem(youtube)
+                .addFacebook(getString(R.string.id_facebook), getString(R.string.title_facebook))
+                .addTwitter(getString(R.string.id_twitter), getString(R.string.title_twitter))
+                .addInstagram(getString(R.string.id_insta), getString(R.string.title_insta))
+                .addPlayStore(getString(R.string.id_playstore), getString(R.string.title_playstore))
+                .addGitHub(getString(R.string.id_github), getString(R.string.title_github))
+                .addItem(email)
 
                 //versao do app
                 .addItem(versao)
+
 
                 .create();
 

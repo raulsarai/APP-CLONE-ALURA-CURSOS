@@ -1,17 +1,17 @@
 package br.com.atmconsultoria;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.navigation.NavigationView;
 
 import br.com.atmconsultoria.databinding.ActivityMainBinding;
 
@@ -23,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //aSwitch = findViewById(R.id.app_bar_switch);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(view -> sendMail());
+        binding.appBarMain.fab.setOnClickListener(view -> {
+            wppChat();
+        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -44,20 +46,20 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-    }
 
-    public void sendMail(){
-        Intent intent = new Intent( Intent.ACTION_SEND);
-
-        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"contato@alura.com.br"} );
-        intent.putExtra( Intent.EXTRA_SUBJECT, "Gostaria de contrar um curso de DESENVOLVIMENTO ANDROID." );
-        intent.putExtra( Intent.EXTRA_TEXT, "Olá, gostaria de fazer curso  de DESENVOLVIMENTO ANDROID para subir de cargo na minha empresa!" );
-
-        intent.setType("message/rfc822");
-
-        startActivity( Intent.createChooser( intent, "Escolha um app de E-mail"));
 
     }
+
+
+    public void wppChat() {
+
+        String url = getString(R.string.url_wppchat);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+
+    }
+
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -65,4 +67,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }

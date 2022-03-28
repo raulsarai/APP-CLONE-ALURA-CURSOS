@@ -6,11 +6,14 @@
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/dummy_image.xml" value="0.1255" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_baseline_inbox_24.xml" value="0.1" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_clientes.xml" value="0.1965" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_cursos.xml" value="0.1965" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_empresas.xml" value="0.1965" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_principal.xml" value="0.1" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_site.xml" value="0.1685" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/ic_menu_sobre.xml" value="0.1965" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/drawable/side_nav_bar.xml" value="0.142" />
-        <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/app_bar_main.xml" value="0.22" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/fragment_clientes.xml" value="0.33" />
         <entry key="..\:/Users/raulm/AndroidStudioProjects/ATMConsultoria/app/src/main/res/layout/fragment_contato.xml" value="0.18425925925925926" />
