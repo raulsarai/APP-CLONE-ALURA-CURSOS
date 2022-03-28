@@ -75,7 +75,9 @@ public class SobreFragment extends Fragment {
 
         Element youtube = new Element();
         youtube.setTitle(getString(R.string.title_youtube));
-        youtube.setIconDrawable(R.mipmap.ic_yt);
+        youtube.setIconDrawable(R.drawable.about_icon_youtube);
+        youtube.setIconTint(R.color.red);
+
         youtube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +91,7 @@ public class SobreFragment extends Fragment {
         Element email = new Element();
         email.setTitle(getString(R.string.title_email));
         email.setIconDrawable(R.drawable.ic_email);
+        email.setIconTint(R.color.purple_200);
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
