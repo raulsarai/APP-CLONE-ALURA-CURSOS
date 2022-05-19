@@ -7,7 +7,7 @@
 
 # Função:
 
-#### -Demosntrar a utilização da webView como recurso de programação orientada a eventos.
+#### -Demonstrar a utilização da webView como recurso de programação orientada a eventos.
 #### -Demonstrar o consumo da api do WhatsApp com configurações que seguem a regra de negócio.
 
 ##
